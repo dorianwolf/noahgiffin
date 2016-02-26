@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background-image: url('home-bg.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 120px;
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #eee;
+}
+
+.container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  padding-top: 302px;
+  text-align: center;
+  background-color: #000;
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.audio-engineer {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  font-size: 30px;
+  margin-bottom: 180px;
+}
+
+.info {
+  margin: 95px auto 0;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 480px){
+
+  .container {
+    padding-top: 100px;
+  }
+
+  span {
+    display: block;
+  }
+
+  .alice {
+    padding-bottom: 16px;
+  }
+
+  .audio-engineer {
+    padding-top: 12px;
+    margin-bottom: 125px;
+  }
+
+  .info {
+    margin-top: 0;
+  }
+}
