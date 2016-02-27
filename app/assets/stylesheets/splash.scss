@@ -1,0 +1,95 @@
+// Place all the styles related to the splash controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #eee;
+  background-color: #090909;
+}
+
+.bg {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+  background-image: url('home-bg.png');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100px;
+  border-radius: 30px;
+}
+
+.container {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+  padding-top: 252px;
+  text-align: center;
+  background-color: #000;
+  border: 2px solid #aaa;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+
+.title {
+  font-size: 50px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.overline {
+  position: relative;
+  width: 0;
+  height: 5px;
+  border-top: 1px solid #eee;
+}
+
+.audio-engineer {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 8px;
+  font-size: 25px;
+}
+
+.info {
+  margin: 95px auto 0;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 480px){
+
+  .container {
+    padding-top: 100px;
+  }
+
+  span {
+    display: block;
+  }
+
+  .alice {
+    padding-bottom: 16px;
+  }
+
+  .audio-engineer {
+    padding-top: 12px;
+    margin-bottom: 125px;
+  }
+
+  .info {
+    margin-top: 0;
+  }
+}
