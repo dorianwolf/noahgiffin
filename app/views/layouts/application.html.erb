@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Alicewildersound</title>
+  <title>Alice Wilder | Audio Engineer</title>
   <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css" media="screen" title="no title" charset="utf-8">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -9,7 +9,26 @@
 </head>
 <body>
 
-<%= yield %>
+  <div class="bg"></div>
+  <div class="container">
+    <div class="title">
+      <span class="alice">Alice Wilder</span>
+      <div class="audio-engineer"><div class="overline"></div>audio engineer</div>
 
+      <%= yield %>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="copyright">
+      <span>&copy;2016 Alice Wilder Sound</span>
+    </div>
+    <div class="social-media"><a href="https://twitter.com/iamrenders"><img src="<%= asset_path "assets/twitter.png" %>" /></a></div>
+      <div class="social-media"><a href="https://www.instagram.com/strong.feelings/"><img src="<%= asset_path "assets/instagram.png" %>" /></a></div>
+      <div class="social-media"><a href="https://www.facebook.com/ashleyrenders"><img src="<%= asset_path "assets/facebook.png" %>" /></a></div>
+      <div class="social-media"><a href="mailto:contact@alicewildersound.com"><img src="<%= asset_path "assets/mail.png" %>" /></a></div>
+      <div class="copyright">
+        <span>web designed by Dorian Thornton</span>
+    </div>
+  </div>
 </body>
 </html>

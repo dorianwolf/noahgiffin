@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'splash#index'
 
-  get 'home/index' => 'home#index'
+  get 'home/' => 'home#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
