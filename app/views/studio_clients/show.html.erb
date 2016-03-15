@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @studio_client.artist %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @studio_client.image %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @studio_client.album %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @studio_client.role %>
+</p>
+
+<%= link_to 'Edit', edit_studio_client_path(@studio_client) %> |
+<%= link_to 'Back', studio_clients_path %>
