@@ -1,0 +1,210 @@
+/* line 5, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+div.container {
+  padding-top: 10px;
+}
+
+/* line 9, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+div.title {
+  font-size: 40px;
+}
+
+/* line 13, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+div.audio-engineer {
+  font-size: 20px;
+}
+
+/* line 17, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu {
+  margin: 80px auto;
+  text-align: center;
+}
+
+/* line 22, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu-item {
+  display: inline-block;
+  float: left;
+  margin: 0 80px;
+  width: 250px;
+  height: 250px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+}
+
+/* line 32, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu-item p {
+  font-size: 20px;
+  font-weight: lighter;
+  margin-top: 25px;
+  letter-spacing: 3px;
+}
+
+/* line 39, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu-item img {
+  width: 250px;
+  height: 200px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* line 47, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu-item .gif {
+  display: none;
+}
+
+/* line 51, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu-item:hover .gif {
+  display: inline;
+}
+
+/* line 55, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.menu-item:hover .jpg {
+  display: none;
+}
+
+/* line 59, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.footer {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  text-align: center;
+}
+
+/* line 68, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.footer .social-media {
+  display: inline-block;
+}
+
+/* line 72, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.footer .social-media img {
+  width: 12px;
+  margin: 0 10px;
+}
+
+/* line 77, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
+.footer .copyright {
+  display: inline-block;
+  font-size: 8px;
+  vertical-align: middle;
+}
+/* line 1, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+body {
+  font-family: Roboto, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #eee;
+  background-color: #090909;
+}
+
+/* line 9, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+.bg {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  background-image: url("/assets/home-bg-41963032a0492daf646a784afbcac20096aed57f031d92c9b835e133fac9dad9.png");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100px;
+}
+
+/* line 21, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+.container {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  bottom: 30px;
+  right: 0;
+  padding-top: 252px;
+  text-align: center;
+  background-color: #090909;
+  border-top: 2px solid #aaa;
+  border-bottom: 2px solid #aaa;
+  opacity: 0.9;
+}
+
+/* line 35, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+.title {
+  font-size: 50px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* line 43, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+.overline {
+  position: relative;
+  width: 0;
+  height: 5px;
+  border-top: 1px solid #eee;
+}
+
+/* line 50, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+.audio-engineer {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 8px;
+  font-size: 25px;
+}
+
+/* line 57, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+.info {
+  margin: 95px auto 0;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+/* line 64, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 71, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+  .container {
+    padding-top: 100px;
+  }
+
+  /* line 75, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+  span {
+    display: block;
+  }
+
+  /* line 79, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+  .alice {
+    padding-bottom: 16px;
+  }
+
+  /* line 83, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+  .audio-engineer {
+    padding-top: 12px;
+    margin-bottom: 125px;
+  }
+
+  /* line 88, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
+  .info {
+    margin-top: 0;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
