@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'New Live client', new_live_client_path %>
+
 <h1>Listing Live Clients</h1>
 
 <table>
@@ -14,7 +16,7 @@
 
   <tbody>
     <% @live_clients.each do |live_client| %>
-      <tr>
+      <tr class="live">
         <td><%= live_client.artist %></td>
         <td><img src="<%= live_client.image %>" alt="" /></td>
         <td><%= live_client.contact %></td>
@@ -27,5 +29,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Live client', new_live_client_path %>
