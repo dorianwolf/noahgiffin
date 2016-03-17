@@ -1,16 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Live Clients</h1>
+<div class="menu">
+  <h1>Live Clients</h1>
 
-<% @live_clients.each do |live_client| %>
-  <div class="live-client">
-    <p><img src="<%= live_client.image %>" alt="" /></p>
-    <p class="artist"><%= live_client.artist %></p>
-    <p class="contact"><%= live_client.contact %></p>
-    <!-- <p><%= link_to 'Show', live_client %></p>
-    <p><%= link_to 'Edit', edit_live_client_path(live_client) %></p>
-    <p><%= link_to 'Destroy', live_client, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->
-  </div>
-<% end %>
-
-<%= link_to 'New Live client', new_live_client_path %>
+  <% @live_clients.each do |live_client| %>
+    <div class="live-client">
+      <p><img src="<%= live_client.image %>" alt="" /></p>
+      <p class="artist"><%= live_client.artist %></p>
+      <p class="contact"><%= live_client.contact %></p>
+      <!-- <p><%= link_to 'Show', live_client %></p>
+      <p><%= link_to 'Edit', edit_live_client_path(live_client) %></p>
+      <p><%= link_to 'Destroy', live_client, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->
+    </div>
+  <% end %>
+  <!-- <%= link_to 'New Live client', new_live_client_path %> -->
+</div>
