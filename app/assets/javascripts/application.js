@@ -17,6 +17,10 @@
 
 $(function() {
 
+  // var height = $('.content').height();
+  // $('.one').height(height);
+  // $('.two').height(height);
+
   $('.overline').animate({
     width: $('.audio-engineer').width()-4
 	}, 3000);

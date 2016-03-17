@@ -1,10 +1,10 @@
 /* line 5, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
-div.container {
+div.content {
   padding-top: 10px;
 }
 
 /* line 9, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/home.scss */
-div.title {
+div.header {
   font-size: 40px;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 /* line 21, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
-.container {
+.content {
   position: fixed;
   top: 80px;
   left: 0;
@@ -127,7 +127,7 @@ body {
 }
 
 /* line 35, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
-.title {
+.header {
   font-size: 50px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -167,7 +167,7 @@ a {
 
 @media screen and (max-width: 480px) {
   /* line 71, /Users/dorianthornton/Documents/math/web dev/alicewildersound/app/assets/stylesheets/main.scss */
-  .container {
+  .content {
     padding-top: 100px;
   }
 

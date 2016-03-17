@@ -11698,7 +11698,7 @@ return jQuery;
     if (xhr != null) {
       xhr.abort();
     }
-    changePage(cachedPage.title, cachedPage.body);
+    changePage(cachedPage.header, cachedPage.body);
     recallScrollPosition(cachedPage);
     return triggerEvent(EVENTS.RESTORE);
   };
@@ -11709,7 +11709,7 @@ return jQuery;
     pageCache[currentStateUrl.absolute] = {
       url: currentStateUrl.relative,
       body: document.body,
-      title: document.title,
+      title: document.header,
       positionY: window.pageYOffset,
       positionX: window.pageXOffset,
       cachedAt: new Date().getTime(),
@@ -11749,7 +11749,7 @@ return jQuery;
 
   changePage = function(title, body, csrfToken, runScripts) {
     triggerEvent(EVENTS.BEFORE_UNLOAD);
-    document.title = title;
+    document.header = title;
     document.documentElement.replaceChild(body, document.body);
     if (csrfToken != null) {
       CSRFToken.update(csrfToken);

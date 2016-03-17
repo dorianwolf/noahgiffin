@@ -8,31 +8,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <div class="bg img"></div>
-  <div class="bg color"></div>
-  <a href="<%= root_path %>">
-    <div class="title">
-      <span class="alice">Alice Wilder</span>
-      <div class="audio-engineer"><div class="overline"></div>audio engineer</div>
+  <div class="wrapper">
+    <div class="header">
+      <a href="<%= root_path %>">
+        <span class="alice">Alice Wilder</span>
+        <div class="audio-engineer"><div class="overline"></div>audio engineer</div>
+      </a>
     </div>
-  </a>
-  <div class="container">
-
-    <%= yield %>
-
-  </div>
-  <div class="footer">
-    <div class="copyright">
-      <span>&copy;2016 Alice Wilder Sound</span>
+    <div class="content">
+      <%= yield %>
     </div>
-    <div class="social-media"><a href="https://twitter.com/iamrenders"><img src="<%= asset_path "twitter.png" %>" /></a></div>
-      <div class="social-media"><a href="https://www.instagram.com/strong.feelings/"><img src="<%= asset_path "instagram.png" %>" /></a></div>
-      <div class="social-media"><a href="https://www.facebook.com/ashleyrenders"><img src="<%= asset_path "facebook.png" %>" /></a></div>
-      <div class="social-media"><a href="mailto:contact@alicewildersound.com"><img src="<%= asset_path "mail.png" %>" /></a></div>
+    <div class="footer">
       <div class="copyright">
-        <span>web designed by Dorian Thornton</span>
+        <span>&copy;2016 Alice Wilder Sound</span>
+      </div>
+      <div class="social-media"><a href="https://twitter.com/iamrenders"><img src="<%= asset_path "twitter.png" %>" /></a></div>
+        <div class="social-media"><a href="https://www.instagram.com/strong.feelings/"><img src="<%= asset_path "instagram.png" %>" /></a></div>
+        <div class="social-media"><a href="https://www.facebook.com/ashleyrenders"><img src="<%= asset_path "facebook.png" %>" /></a></div>
+        <div class="social-media"><a href="mailto:contact@alicewildersound.com"><img src="<%= asset_path "mail.png" %>" /></a></div>
+        <div class="copyright">
+          <span>web designed by Dorian Thornton</span>
+      </div>
     </div>
   </div>
-</body>
+  </body>
 </html>

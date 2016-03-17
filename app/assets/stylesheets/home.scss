@@ -2,31 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div.container {
-  padding-top: 10px;
-}
-
-div.title {
-  font-size: 40px;
-}
-
-div.audio-engineer {
-  font-size: 20px;
-}
-
 .menu {
-  margin: 80px auto;
+  margin-top: 80px;
   text-align: center;
 }
 
 .menu-item {
+  vertical-align: middle;
   display: inline-block;
-  float: left;
-  margin: 0 80px;
+  margin: 0 50px;
   width: 250px;
   height: 250px;
-  border: 2px solid #aaa;
   border-radius: 10px;
+  background-color: #000;
+  box-shadow: 2px 2px 14px #888888;
 }
 
 .menu-item p {
@@ -54,28 +43,4 @@ div.audio-engineer {
 
 .menu-item:hover .jpg {
   display: none;
-}
-
-.footer {
-  position: fixed;
-  bottom: 5px;
-  left: 50%;
-  width: 500px;
-  margin-left: -250px;
-  text-align: center;
-}
-
-.footer .social-media {
-  display: inline-block;
-}
-
-.footer .social-media img {
-  width: 12px;
-  margin: 0 10px;
-}
-
-.footer .copyright {
-  display: inline-block;
-  font-size: 8px;
-  vertical-align: middle;
 }

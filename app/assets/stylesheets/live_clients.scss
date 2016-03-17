@@ -2,36 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.live {
-  width: 300px;
-  border: 1px solid white;
+.live-client {
+  width: 220px;
   border-radius: 10px;
   margin: 20px 30px;
   padding: 10px;
+  background-color: #090909;
+  box-shadow: 2px 2px 14px #888888;
+  text-align: center;
 }
 
-.live:hover {
+.live-client:hover {
   cursor: pointer;
 }
 
-.live img {
-  width: 300px;
-  height: 300px;
+.live-client img {
+  width: 220px;
+  height: 220px;
   border-radius: 10px;
   object-fit: cover;
   object-position: top;
 }
 
-.live .artist {
+.live-client .artist {
   font-size: 25px;
   font-weight: 800;
   margin: 10px 0;
 }
 
-.live .contact {
+.live-client .contact {
   font-size: 10px;
 }
 
-.live p {
+.live-client p {
   font-size: 12px;
 }

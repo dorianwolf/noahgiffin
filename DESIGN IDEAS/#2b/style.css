@@ -10,7 +10,7 @@ body {
   color: #eee;
 }
 
-.container {
+.content {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -20,7 +20,7 @@ body {
   opacity: 0.9;
 }
 
-.title {
+.header {
   font-size: 60px;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -55,7 +55,7 @@ a {
 
 @media screen and (max-width: 480px){
 
-  .container {
+  .content {
     padding-top: 100px;
   }
 
