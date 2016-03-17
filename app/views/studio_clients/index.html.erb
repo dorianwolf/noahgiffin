@@ -1,33 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Studio Clients</h1>
+<h1>Studio Clients</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Artist</th>
-      <th>Image</th>
-      <th>Album</th>
-      <th>Role</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @studio_clients.each do |studio_client| %>
-      <tr>
-        <td><%= studio_client.artist %></td>
-        <td><img src="<%= studio_client.image %>" alt="" /></td>
-        <td><%= studio_client.album %></td>
-        <td><%= studio_client.role %></td>
-        <td><%= link_to 'Show', studio_client %></td>
-        <td><%= link_to 'Edit', edit_studio_client_path(studio_client) %></td>
-        <td><%= link_to 'Destroy', studio_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<% @studio_clients.each do |studio_client| %>
+  <div class="studio-client">
+    <p><img src="<%= studio_client.image %>" alt="" /></p>
+    <p class="artist"><%= studio_client.artist %></p>
+    <p class="contact"><%= studio_client.contact %></p>
+    <!-- <p><%= link_to 'Show', studio_client %></p>
+    <p><%= link_to 'Edit', edit_studio_client_path(studio_client) %></p>
+    <p><%= link_to 'Destroy', studio_client, method: :delete, data: { confirm: 'Are you sure?' } %></p> -->
+  </div>
+<% end %>
 
 <%= link_to 'New Studio client', new_studio_client_path %>

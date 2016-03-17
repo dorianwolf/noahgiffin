@@ -1,3 +1,48 @@
 // Place all the styles related to the StudioClients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  padding: 15px 0;
+  text-align: center;
+  font-size: 25px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+
+.studio-client {
+  display: inline-block;
+  width: 220px;
+  border-radius: 10px;
+  margin: 20px 30px;
+  padding: 10px;
+  background-color: #090909;
+  box-shadow: 2px 2px 14px #888888;
+  text-align: center;
+}
+
+.studio-client:hover {
+  cursor: pointer;
+}
+
+.studio-client img {
+  width: 220px;
+  height: 220px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.studio-client .artist {
+  font-size: 25px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.studio-client .contact {
+  font-size: 10px;
+}
+
+.studio-client p {
+  font-size: 12px;
+}
