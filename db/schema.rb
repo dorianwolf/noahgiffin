@@ -11,17 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315030325) do
+ActiveRecord::Schema.define(version: 20160322160130) do
 
   create_table "live_clients", force: :cascade do |t|
-    t.string   "artist"
-    t.string   "image"
-    t.string   "contact"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "lives", force: :cascade do |t|
     t.string   "artist"
     t.string   "image"
     t.string   "contact"
@@ -37,23 +29,5 @@ ActiveRecord::Schema.define(version: 20160315030325) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  create_table "studios", force: :cascade do |t|
-    t.string   "artist"
-    t.string   "image"
-    t.string   "album"
-    t.string   "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tracks", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "studio_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "tracks", ["studio_id"], name: "index_tracks_on_studio_id"
 
 end

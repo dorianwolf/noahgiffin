@@ -1,3 +1,52 @@
 // Place all the styles related to the Bio controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bio {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.photo, .blurb {
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0 50px;
+  border-radius: 10px;
+  background-color: #000;
+  box-shadow: 2px 2px 14px #888888;
+}
+
+.photo {
+  width: 250px;
+  height: 250px;
+}
+
+.photo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.photo .gif {
+  display: none;
+}
+
+.photo:hover .gif {
+  display: inline;
+}
+
+.photo:hover .jpg {
+  display: none;
+}
+
+.blurb {
+  width: 500px;
+  padding: 20px 30px;
+}
+
+.blurb p {
+  font-size: 15px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  line-height: 20px;
+}
