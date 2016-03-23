@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   resources :live_clients, :path => 'live'
-  resources :studio_clients, :path => 'studio'
   resources :bio, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   root 'home#index'
+
+  resources :studio_clients, :path => 'studio'
+  resources :tracks
 
   # namespace :admin do
   # resources :studio_clients
