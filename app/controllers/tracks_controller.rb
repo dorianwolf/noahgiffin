@@ -32,7 +32,7 @@ class TracksController < ApplicationController
         format.html { redirect_to studio_clients_path, notice: 'Track was successfully added.' }
         format.json { render :show, status: :created, location: @track }
       else
-        format.html { render :new }
+        format.html { redirect_to studio_clients_path, notice: "You need to include a title for the track" }
         format.json { render json: @track.errors, status: :unprocessable_entity }
       end
     end

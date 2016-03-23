@@ -12,7 +12,6 @@ class StudioClientsController < ApplicationController
   # GET /studio_clients/1.json
   def show
     @track = Track.new
-    @track.studio_client_id = @studio_client.id
   end
 
   # GET /studio_clients/new
