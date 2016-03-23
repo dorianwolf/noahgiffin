@@ -21,8 +21,8 @@ h1 {
   text-align: center;
 }
 
-.studio-client:hover {
-  cursor: pointer;
+.studio-client div {
+  display: inline-block;
 }
 
 .studio-client img {
@@ -39,10 +39,18 @@ h1 {
   margin: 10px 0;
 }
 
-.studio-client .contact {
-  font-size: 10px;
-}
-
 .studio-client p {
   font-size: 12px;
+  display: inline;
+}
+
+.studio-client .track {
+  display: block;
+  clear: both;
+}
+
+.studio-client .track img {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
 }

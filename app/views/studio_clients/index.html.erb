@@ -4,12 +4,12 @@
 
 <% @studio_clients.each do |studio_client| %>
   <div class="studio-client">
-    <p><img src="<%= studio_client.image %>" alt="" /></p>
-    <p class="artist"><%= studio_client.artist %></p>
-    <p class="album"><%= studio_client.album %></p>
-    <p class="role"><%= studio_client.role %></p>
+    <div class="pic"><img src="<%= studio_client.image %>" alt="" /></div>
+    <div class="artist"><%= studio_client.artist %></div>
+    <div class="album"><%= studio_client.album %></div>
+    <div class="role"><%= studio_client.role %></div>
     <% studio_client.tracks.each do |track| %>
-      <p class="track"> <%= track.title %></p>
+      <div class="track"> <%= track.title %></div>
     <% end %>
     <!-- <p><%= link_to 'Show', studio_client %></p>
     <p><%= link_to 'Edit', edit_studio_client_path(studio_client) %></p>

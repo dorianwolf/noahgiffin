@@ -29,7 +29,7 @@ class TracksController < ApplicationController
 
     respond_to do |format|
       if @track.save
-        format.html { redirect_to studio_clients_path, notice: 'Track was successfully added.' }
+        format.html { redirect_to studio_client_path(@track.studio_client_id), notice: 'Track was successfully added.' }
         format.json { render :show, status: :created, location: @track }
       else
         format.html { redirect_to studio_clients_path, notice: "You need to include a title for the track" }
@@ -43,10 +43,10 @@ class TracksController < ApplicationController
   def update
     respond_to do |format|
       if @track.update(track_params)
-        format.html { redirect_to studio_clients_path, notice: 'Live client was successfully updated.' }
+        format.html { redirect_to studio_client_path(@track.studio_client_id), notice: 'Live client was successfully updated.' }
         format.json { render :show, status: :ok, location: @track }
       else
-        format.html { render :edit }
+        format.html { redirect_to studio_clients_path, notice: 'Didnt save edit for some reason' }
         format.json { render json: @track.errors, status: :unprocessable_entity }
       end
     end
@@ -57,7 +57,7 @@ class TracksController < ApplicationController
   def destroy
     @track.destroy
     respond_to do |format|
-      format.html { redirect_to tracks_url, notice: 'Live client was successfully destroyed.' }
+      format.html { redirect_to studio_client_path(@track.studio_client_id), notice: 'Track deleted.' }
       format.json { head :no_content }
     end
   end

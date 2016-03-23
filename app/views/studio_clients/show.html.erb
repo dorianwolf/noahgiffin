@@ -1,26 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div class="studio-client">
+  <div class='artist'>
+    <%= @studio_client.artist %>
+  </div>
 
-<p>
-  <strong>Artist:</strong>
-  <%= @studio_client.artist %>
-</p>
+  <div class='image'>
+    <img src="<%= @studio_client.image %>" alt="" />
+  </div>
 
-<p>
-  <strong>Image:</strong>
-  <%= @studio_client.image %>
-</p>
+  <div class='album'>
+    <%= @studio_client.album %>
+  </div>
 
-<p>
-  <strong>Album:</strong>
-  <%= @studio_client.album %>
-</p>
+  <div class='role'>
+    <%= @studio_client.role %>
+  </div>
 
-<p>
-  <strong>Role:</strong>
-  <%= @studio_client.role %>
-</p>
+  <% @studio_client.tracks.each do |track| %>
+    <div class="track">
+      <p> <%= track.title %></p>
+      <%= link_to image_tag('delete.png'), track, method: 'delete' %>
+    </div>
 
-<%= render 'track_form' %>
-
-<%= link_to 'Edit', edit_studio_client_path(@studio_client) %> |
-<%= link_to 'Back', studio_clients_path %>
+  <% end %>
+</div>
+<div class="studio-client">
+  <p>
+    Edit
+  </p>
+  <%= render 'form' %>
+  <%= render 'track_form' %>
+</div>
