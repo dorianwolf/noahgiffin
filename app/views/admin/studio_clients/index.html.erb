@@ -11,5 +11,10 @@
     <% studio_client.tracks.each do |track| %>
       <div class="track"> <%= track.title %></div>
     <% end %>
+    <p><%= link_to 'Show', admin_studio_client_path(studio_client) %></p>
+    <p><%= link_to 'Edit', edit_admin_studio_client_path(studio_client) %></p>
+    <p><%= link_to 'Destroy', admin_studio_client_path(studio_client), method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 <% end %>
+
+<%= link_to 'New Studio client', new_admin_studio_client_path %>

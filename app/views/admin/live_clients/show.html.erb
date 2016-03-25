@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @live_client.artist %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @live_client.image %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @live_client.contact %>
+</p>
+
+<%= link_to 'Edit', edit_live_client_path(@live_client) %> |
+<%= link_to 'Back', live_clients_path %>

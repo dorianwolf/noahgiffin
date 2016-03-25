@@ -1,18 +1,23 @@
 Rails.application.routes.draw do
-  resources :live_clients, :path => 'live'
-  resources :bio, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   root 'home#index'
 
-  resources :studio_clients, :path => 'studio'
-  resources :tracks
+  resources :home, only: [:index]
+  resources :bio, only: [:index]
+  resources :live_clients, :path => 'live', only: [:index]
 
-  # namespace :admin do
-  # resources :studio_clients
-  # resources :live_clients
-  # end
+  resources :studio_clients, :path => 'studio', only: [:index] do
+    resources :tracks, only: [:index]
+  end
+
+  namespace :admin do
+    resources :live_clients, :path => 'live'
+    resources :studio_clients, :path => 'studio' do
+      resources :tracks
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
