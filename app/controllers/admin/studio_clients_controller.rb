@@ -21,6 +21,7 @@ class Admin::StudioClientsController < AdminController
 
   # GET /studio_clients/1/edit
   def edit
+    @track = Track.new
   end
 
   # POST /studio_clients
@@ -67,6 +68,11 @@ class Admin::StudioClientsController < AdminController
     # Use callbacks to share common setup or constraints between actions.
     def set_studio_client
       @studio_client = StudioClient.find(params[:id])
+    end
+
+    # Use callbacks to share common setup or constraints between actions.
+    def set_track
+      @track = Track.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

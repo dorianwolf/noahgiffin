@@ -3,14 +3,16 @@
     <h1>Live Clients</h1>
 
   <% @live_clients.each do |live_client| %>
-    <div class="live-client">
-      <p><img src="<%= live_client.image %>" alt="" /></p>
-      <p class="artist"><%= live_client.artist %></p>
-      <p class="contact"><%= live_client.contact %></p>
-      <p><%= link_to 'Show', admin_live_client_path(live_client) %></p>
-      <p><%= link_to 'Edit', edit_admin_live_client_path(live_client) %></p>
-      <p><%= link_to 'Destroy', admin_live_client_path(live_client), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    </div>
+    <a href="<%= edit_admin_live_client_path(live_client) %>">
+      <div class="live-client">
+        <p><img src="<%= live_client.image %>" alt="" /></p>
+        <p class="artist"><%= live_client.artist %></p>
+        <p class="contact"><%= live_client.contact %></p>
+        <p><%= link_to image_tag('delete.png'), admin_live_client_path(live_client), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    </a>
   <% end %>
-  <%= link_to 'New Live client', new_admin_live_client_path %>
+  <div class="live-client">
+    <%= link_to 'New Live client', new_admin_live_client_path %>
+  </div>
 </div>

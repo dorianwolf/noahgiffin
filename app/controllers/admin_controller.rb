@@ -1,9 +1,5 @@
 class AdminController < ApplicationController
-  before_action :require_admin
+  
+  before_action :authorize
 
-  def require_admin
-    unless true
-      redirect_to root_path
-    end
-  end
 end

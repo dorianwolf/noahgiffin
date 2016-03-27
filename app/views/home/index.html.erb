@@ -1,5 +1,9 @@
 <div class="menu">
-  <a href='<%= studio_clients_path %>' >
+  <% if current_user %>
+    <a href="<%= admin_studio_clients_path %>">
+  <% else %>
+    <a href="<%= studio_clients_path %>">
+  <% end %>
     <div class="menu-item studio">
       <p>
         studio
@@ -8,7 +12,7 @@
       <%= image_tag('equalizer.gif', class: 'gif') %>
     </div>
   </a>
-  <a href='<%= bio_index_path %>'>
+      <a href="<%= bio_index_path %>">
     <div class="menu-item about">
       <p>
         bio
@@ -17,7 +21,11 @@
       <%= image_tag('alice.jpg', class: 'gif') %>
     </div>
   </a>
-  <a href='<%= live_clients_path %>'>
+  <% if current_user %>
+    <a href="<%= admin_live_clients_path %>">
+  <% else %>
+    <a href='<%= live_clients_path %>'>
+  <% end %>
     <div class="menu-item live">
       <p>
         live
