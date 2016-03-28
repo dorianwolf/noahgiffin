@@ -3,9 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .list {
-  text-align: center;
-  margin: 20px auto;
-  max-width: 1100px;
+  display: table;
+  max-width: 1000px;
 }
 
 h1 {
@@ -16,10 +15,10 @@ h1 {
 }
 
 .live-client {
-  display: inline-block;
+  display: table-row;
+  float: left;
   width: 250px;
   height: 250px;
-  text-align: center;
   position: relative;
 }
 
