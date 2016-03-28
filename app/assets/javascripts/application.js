@@ -23,12 +23,20 @@ $(window).bind('page:change', function() {
 });
 function initPage() {
 
-  // var height = $('.content').height();
-  // $('.one').height(height);
-  // $('.two').height(height);
-
-  $('.overline').animate({
-    width: $('.audio-engineer').width()-4
-	}, 3000);
+  // Overline animation and text customization
+  if($('.header-info').length){
+    var text = $('.header-info').data('text');
+    var header = $('.audio-engineer');
+    header.append(text);
+    $('.overline').animate({
+      width: $('.audio-engineer').width()-4
+  	}, 2000);
+  } else {
+    var header = $('.audio-engineer');
+    header.append('admin');
+    $('.overline').animate({
+      width: $('.audio-engineer').width()-4
+  	}, 2000);
+  }
 
 };

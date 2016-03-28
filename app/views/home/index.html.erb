@@ -1,4 +1,7 @@
+<%= content_tag "div", class:'header-info', data: {text: 'audio engineer'} do %>
+<% end %>
 <div class="menu">
+  <div class="menu-item special"><p>Alice Wilder is an audio engineer based out of Seattle and Toronto</p><span class='info'></span></div>
   <div class="menu-item"><span class='info'></span></div>
   <a href="<%= bio_index_path %>">
     <div class="menu-item bio">
@@ -11,6 +14,7 @@
       </span>
     </div>
   </a>
+  <div class="menu-item"><span class='info'></span></div>
   <div class="menu-item"><span class='info'></span></div>
   <% if current_user %>
     <a href="<%= admin_studio_clients_path %>">
@@ -27,8 +31,6 @@
       </span>
     </div>
   </a>
-  <div class="menu-item"><span class='info'></span></div>
-  <div class="menu-item special"><p>Alice Wilder is an audio engineer based out of Seattle and Toronto</p><span class='info'></span></div>
   <% if current_user %>
     <a href="<%= admin_live_clients_path %>">
   <% else %>
@@ -44,6 +46,5 @@
       </span>
     </div>
   </a>
-  <div class="menu-item"><span class='info'></span></div>
   <div class="menu-item"><span class='info'></span></div>
 </div>
