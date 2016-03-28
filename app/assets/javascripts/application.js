@@ -16,6 +16,12 @@
 //= require_tree .
 
 $(function() {
+  initPage();
+});
+$(window).bind('page:change', function() {
+  initPage();
+});
+function initPage() {
 
   // var height = $('.content').height();
   // $('.one').height(height);
@@ -25,4 +31,4 @@ $(function() {
     width: $('.audio-engineer').width()-4
 	}, 3000);
 
-});
+};

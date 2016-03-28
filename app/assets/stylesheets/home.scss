@@ -2,45 +2,68 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// .intro {
+//   padding-top: 40px;
+// }
+//
+// .intro p {
+//   text-align: center;
+//   color: #ddd;
+//   letter-spacing: 1.5px;
+// }
+
 .menu {
-  margin-top: 80px;
   text-align: center;
 }
 
 .menu-item {
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0 50px;
-  width: 250px;
-  height: 250px;
-  border-radius: 10px;
+  margin: 0 auto;
   background-color: #000;
-  box-shadow: 2px 2px 14px #888888;
+  position: relative;
+  overflow: hidden;
 }
 
 .menu-item p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: lighter;
-  margin-top: 25px;
   letter-spacing: 3px;
-}
-
-.menu-item img {
-  width: 250px;
-  height: 200px;
-  border-radius: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 .menu-item .gif {
   display: none;
 }
 
-.menu-item:hover .gif {
-  display: inline;
+.menu-item:hover {
+  .gif {
+    display: inline;
+  }
+  .jpg {
+    display: none;
+  }
 }
 
-.menu-item:hover .jpg {
-  display: none;
+.bio {
+  width: 800px;
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+}
+
+.bio img {
+  width: 600px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.live, .studio {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+}
+
+.live img, .studio img {
+  width: 400px;
+}
+
+.studio {
+  border-right: 1px solid #eee;
 }

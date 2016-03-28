@@ -28,7 +28,7 @@ class Admin::LiveClientsController < AdminController
 
     respond_to do |format|
       if @live_client.save
-        format.html { redirect_to edit_admin_live_client_path(@live_client), notice: 'Live client was successfully created.' }
+        format.html { redirect_to admin_live_clients_path, notice: 'Live client was successfully created.' }
         format.json { render :show, status: :created, location: @live_client }
       else
         format.html { render :new }

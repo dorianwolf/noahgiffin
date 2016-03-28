@@ -1,12 +1,14 @@
-<div class="list">
-  <p id="notice"><%= notice %></p>
-    <h1>Live Clients</h1>
+<h1>Live Clients</h1>
 
+<div class="list">
   <% @live_clients.each do |live_client| %>
     <div class="live-client">
-      <p><img src="<%= live_client.image %>" alt="" /></p>
-      <p class="artist"><%= live_client.artist %></p>
-      <p class="contact"><%= live_client.contact %></p>
+      <img src="<%= live_client.image %>" alt="" />
+      <span class="info">
+        <p class="artist"><%= live_client.artist %></p>
+        <a href="mailto:<%=live_client.contact%>"><p class="contact">contact</p></a>
+      </span>
     </div>
   <% end %>
+
 </div>

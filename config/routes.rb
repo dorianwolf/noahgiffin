@@ -22,8 +22,8 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
-  # DELETE THIS SHIT ONCE ALICE IS SIGNED IN
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
-  # DELETE THIS SHIT ONCE ALICE IS SIGNED IN
+  # DELETE THIS SHIT ONCE ALICE IS SIGNED UP
+  # get '/signup' => 'users#new'
+  # post '/users' => 'users#create'
+  # DELETE THIS SHIT ONCE ALICE IS SIGNED UP
 end

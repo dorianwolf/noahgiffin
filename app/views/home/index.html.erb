@@ -1,4 +1,19 @@
+<div class="intro">
+  <p>
+
+  </p>
+</div>
+
 <div class="menu">
+  <a href="<%= bio_index_path %>">
+    <div class="menu-item bio">
+      <p>
+        Alice Wilder is an audio engineer based out of Seattle and Toronto
+      </p>
+      <%= image_tag('alice.jpg', class: 'jpg') %>
+      <%= image_tag('alice.jpg', class: 'gif') %>
+    </div>
+  </a>
   <% if current_user %>
     <a href="<%= admin_studio_clients_path %>">
   <% else %>
@@ -8,17 +23,8 @@
       <p>
         studio
       </p>
-      <%= image_tag('equalizer.jpg', class: 'jpg') %>
-      <%= image_tag('equalizer.gif', class: 'gif') %>
-    </div>
-  </a>
-      <a href="<%= bio_index_path %>">
-    <div class="menu-item about">
-      <p>
-        bio
-      </p>
-      <%= image_tag('alice.jpg', class: 'jpg') %>
-      <%= image_tag('alice.jpg', class: 'gif') %>
+      <%= image_tag('flame.jpg', class: 'jpg') %>
+      <%= image_tag('flame.gif', class: 'gif') %>
     </div>
   </a>
   <% if current_user %>
@@ -30,8 +36,8 @@
       <p>
         live
       </p>
-      <%= image_tag('flame.jpg', class: 'jpg') %>
-      <%= image_tag('flame.gif', class: 'gif') %>
+      <%= image_tag('equalizer.jpg', class: 'jpg') %>
+      <%= image_tag('equalizer.gif', class: 'gif') %>
     </div>
   </a>
 </div>

@@ -16,6 +16,7 @@ a {
 
 .wrapper {
   background: rgba(09, 09, 09, 0.95);
+  min-height: 100%;
 }
 
 .header {
@@ -49,7 +50,7 @@ a {
 .content {
   padding-top: 10px;
   background: none;
-  min-height: 83vh;
+  min-height: 82vh;
 }
 
 .footer {
@@ -82,25 +83,22 @@ a {
 
 @media screen and (max-width: 480px){
 
+
   .content {
     display: block;
-    padding-top: 100px;
   }
 
   span {
-    display: block;
   }
 
   .alice {
-    padding-bottom: 16px;
   }
 
   .audio-engineer {
-    padding-top: 12px;
-    margin-bottom: 125px;
+
   }
 
-  .info {
-    margin-top: 0;
+  .footer {
+    height: 50px;
   }
 }

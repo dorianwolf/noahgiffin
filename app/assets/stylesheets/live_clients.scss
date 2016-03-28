@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.list {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 1100px;
+}
+
 h1 {
   text-align: center;
   font-size: 25px;
@@ -9,43 +15,45 @@ h1 {
   font-weight: 300;
 }
 
-.list {
-  text-align: center;
-}
-
 .live-client {
   display: inline-block;
-  width: 220px;
-  border-radius: 10px;
-  margin: 20px 30px;
-  padding: 10px;
-  background-color: #090909;
-  box-shadow: 2px 2px 14px #888888;
+  width: 250px;
+  height: 250px;
   text-align: center;
-}
-
-.live-client:hover {
-  cursor: pointer;
+  position: relative;
 }
 
 .live-client img {
-  width: 220px;
-  height: 220px;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: top;
 }
 
-.live-client .artist {
-  font-size: 25px;
-  font-weight: 800;
-  margin: 10px 0;
+.info {
+  cursor: default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #010;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
-.live-client .contact {
-  font-size: 10px;
+.info .artist {
+  margin: 60px 10px 0;
+  font-size: 30px;
 }
 
-.live-client p {
+.info .contact {
+  margin: 10px 10px 0;
   font-size: 12px;
+}
+
+.live-client:hover {
+  .info {
+    opacity: 0.7;
+  }
 }
