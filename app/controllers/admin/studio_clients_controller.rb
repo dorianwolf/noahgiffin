@@ -31,7 +31,7 @@ class Admin::StudioClientsController < AdminController
 
     respond_to do |format|
       if @studio_client.save
-        format.html { redirect_to @studio_client, notice: 'Studio client was successfully created.' }
+        format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Studio client was successfully created.' }
         format.json { render :show, status: :created, location: @studio_client }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class Admin::StudioClientsController < AdminController
   def update
     respond_to do |format|
       if @studio_client.update(studio_client_params)
-        format.html { redirect_to @studio_client, notice: 'Studio client was successfully updated.' }
+        format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Studio client was successfully updated.' }
         format.json { render :show, status: :ok, location: @studio_client }
       else
         format.html { render :edit }
@@ -77,6 +77,6 @@ class Admin::StudioClientsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def studio_client_params
-      params.require(:studio_client).permit(:artist, :image, :album, :role)
+      params.require(:studio_client).permit(:artist, :image, :album, :role, :soundcloud)
     end
 end

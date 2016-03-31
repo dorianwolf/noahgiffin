@@ -1,18 +1,21 @@
+<p id="notice"><%= notice %></p>
 <div class="list">
-  <p id="notice"><%= notice %></p>
-    <h1>Live Clients</h1>
-
   <% @live_clients.each do |live_client| %>
-    <a href="<%= edit_admin_live_client_path(live_client) %>">
-      <div class="live-client">
-        <p><img src="<%= live_client.image %>" alt="" /></p>
-        <p class="artist"><%= live_client.artist %></p>
-        <p class="contact"><%= live_client.contact %></p>
-        <p><%= link_to image_tag('delete.png'), admin_live_client_path(live_client), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <div class="live-client">
+      <img src="<%= live_client.image %>" alt="" class="artist-pic"/>
+      <%= link_to image_tag('delete.png'), admin_live_client_path(live_client), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="info">
+        <%= link_to image_tag('delete.png'), admin_live_client_path(live_client), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <a href="<%= edit_admin_live_client_path(live_client) %>">
+          <p class="artist"><%= live_client.artist %></p>
+        </a>
+        <a href="mailto:<%=live_client.contact%>">
+          <p class="contact">contact</p>
+        </a>
       </div>
-    </a>
+    </div>
   <% end %>
   <div class="live-client">
-    <%= link_to 'New Live client', new_admin_live_client_path %>
+    <%= link_to image_tag('add.png'), new_admin_live_client_path, class:'add' %>
   </div>
 </div>

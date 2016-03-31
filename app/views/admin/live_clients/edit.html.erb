@@ -1,3 +1,15 @@
-<h1>Editing Live Client</h1>
-
-<%= render 'form' %>
+<div class="list">
+  <div class="live-client">
+    <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
+  </div>
+  <div class="live-client">
+    <%= render 'form' %>
+    <%= link_to image_tag('delete.png'), admin_live_client_path(@live_client), method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+  <div class="live-client">
+    <div class="info back">
+      <p class="artist"><%= @live_client.artist %></p>
+      <p class="contact">contact</p>
+    </div>
+  </div>
+</div>

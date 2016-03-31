@@ -5,9 +5,14 @@
 .menu-item.blurb {
   background-color: #111;
   width: 502px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
   p {
-    top: 20px;
+    position: inherit;
+    top: 0;
     left: 0;
     line-height: 20px;
   }

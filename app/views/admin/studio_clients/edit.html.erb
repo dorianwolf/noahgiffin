@@ -1,33 +1,31 @@
-<p id="notice"><%= notice %></p>
-<div class="studio-client">
-  <div class='artist'>
-    <%= @studio_client.artist %>
-  </div>
-
-  <div class='image'>
+<div class="list">
+  <p id="notice"><%= notice %></p>
+  <div class="studio-client">
     <img src="<%= @studio_client.image %>" alt="" />
   </div>
-
-  <div class='album'>
-    <%= @studio_client.album %>
+  <div class="studio-client">
+    <%= render 'form' %>
   </div>
+  <div class="studio-client">
+    <div class="info back">
+      <div class='artist'>
+        <%= @studio_client.artist %>
+      </div>
 
-  <div class='role'>
-    <%= @studio_client.role %>
-  </div>
+      <div class='album'>
+        <%= @studio_client.album %>
+      </div>
 
-  <% @studio_client.tracks.each do |track| %>
-    <div class="track">
-      <p> <%= track.title %></p>
-      <%= link_to image_tag('delete.png'), admin_studio_client_track_path(@studio_client, track), method: :delete %>
+      <div class='role'>
+        <%= @studio_client.role %>
+      </div>
+
+      <% @studio_client.tracks.each do |track| %>
+        <div class="track">
+          <p> <%= track.title %></p>
+          <%= link_to image_tag('delete.png'), admin_studio_client_track_path(@studio_client, track), method: :delete %>
+        </div>
+      <% end %>
     </div>
-
-  <% end %>
-</div>
-<div class="studio-client">
-  <p>
-    Edit
-  </p>
-  <%= render 'form' %>
-  <%= render 'track_form' %>
+  </div>
 </div>

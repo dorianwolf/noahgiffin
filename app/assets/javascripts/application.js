@@ -27,13 +27,18 @@ function initPage() {
   if($('.header-info').length){
     var text = $('.header-info').data('text');
     var header = $('.audio-engineer');
-    header.append(text);
+    console.log(header.html().indexOf(text));
+    if(header.html().indexOf(text) == -1){
+      header.append(text);
+    }
     $('.overline').animate({
       width: $('.audio-engineer').width()-4
   	}, 2000);
   } else {
     var header = $('.audio-engineer');
-    header.append('admin');
+    if(header.html().indexOf('admin') == -1){
+      header.append('admin');
+    }
     $('.overline').animate({
       width: $('.audio-engineer').width()-4
   	}, 2000);

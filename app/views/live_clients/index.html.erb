@@ -1,14 +1,20 @@
-<%= content_tag "div", class:'header-info', data: {text: 'live'} do %>
+<% if notice %>
+  <%= content_tag "div", class:'header-info', data: {text: notice} do %>
+  <% end %>
+<% else %>
+  <%= content_tag "div", class:'header-info', data: {text: 'live clients'} do %>
+  <% end %>
 <% end %>
 <div class="list">
   <% @live_clients.each do |live_client| %>
     <div class="live-client">
-      <img src="<%= live_client.image %>" alt="" />
+      <img src="<%= live_client.image %>" alt="" class="artist-pic"/>
       <span class="info">
         <p class="artist"><%= live_client.artist %></p>
-        <a href="mailto:<%=live_client.contact%>"><p class="contact">contact</p></a>
+        <a href="mailto:<%=live_client.contact%>">
+          <p class="contact">contact</p>
+        </a>
       </span>
     </div>
   <% end %>
-
 </div>

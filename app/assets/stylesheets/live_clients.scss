@@ -14,32 +14,53 @@
   width: 250px;
   height: 250px;
   position: relative;
+  background-color: #111;
 }
 
 .live-client img {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 13px;
+  opacity: 0.7;
+}
+
+.live-client .add img {
+  top: 90px;
+  left: 90px;
+  width: 70px;
+  opacity: 0.8;
+}
+
+.live-client img:hover {
+  opacity: 1;
+}
+
+.live-client .artist-pic {
+  position: static;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
 }
 
-.info {
+.live-client .info {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #010;
+  background-color: #232;
   opacity: 0;
   transition: opacity 1.5s;
 }
 
-.info .artist {
+.live-client .info .artist {
   margin: 60px 10px 0;
   font-size: 30px;
 }
 
-.info .contact {
+.live-client .info .contact {
   margin: 10px 10px 0;
   font-size: 12px;
 }
@@ -48,4 +69,48 @@
   .info {
     opacity: 0.7;
   }
+}
+
+.live-client .info.back {
+  opacity: 0.7;
+}
+
+form {
+  text-align: center;
+}
+
+form .field {
+  border: none;
+}
+
+form .field input {
+  background-color: #333;
+  color: #ddd;
+  width: 225px;
+  border: none;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+form .field.artist input {
+  margin: 57px 10px 0;
+  font-size: 30px;
+}
+
+form .field.contact input {
+  margin: 5px 10px 10px;
+  font-size: 12px;
+}
+
+form .field.image {
+  margin: 20px 10px;
+}
+
+form .field.image input {
+  height: 25px;
+  font-size: 10px;
+}
+
+form .actions input {
+  margin: 10px 0;
 }
