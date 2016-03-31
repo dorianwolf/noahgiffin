@@ -8,20 +8,13 @@
   max-width: 1000px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 25px;
-  letter-spacing: 3px;
-  font-weight: 300;
-}
-
 .studio-client {
-  display: inline-block;
+  display: table-row;
+  float: left;
   width: 250px;
   height: 250px;
-  text-align: center;
   position: relative;
-  background-color: #111;
+  background-color: #222;
 }
 
 .studio-client img {
@@ -58,18 +51,18 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #010;
+  background-color: #333;
   opacity: 0;
   transition: opacity 1.5s;
 }
 
 .studio-client .info .artist {
-  padding: 20px 10px 0;
+  padding: 40px 20px 0;
   font-size: 30px;
 }
 
 .studio-client .info .album, .studio-client .info .role {
-  margin: 10px 10px 0;
+  margin: 10px 20px 0;
   font-size: 15px;
 }
 
@@ -92,15 +85,19 @@ iframe {
   }
 }
 
+.studio-client .info.back {
+  opacity: 1;
+}
+
 form {
   text-align: center;
 }
 
-form .field {
+form .studio-field {
   border: none;
 }
 
-form .field input {
+form .studio-field input {
   background-color: #333;
   color: #ddd;
   width: 225px;
@@ -109,25 +106,33 @@ form .field input {
   text-transform: uppercase;
 }
 
-form .field.artist input {
-  margin: 57px 10px 0;
+form .studio-field.artist input {
   font-size: 30px;
+  margin: 35px 10px 0;
 }
 
-form .field.contact input {
-  margin: 5px 10px 10px;
-  font-size: 12px;
+form .studio-field.album input, form .studio-field.role input  {
+  margin: 7px 10px 0;
+  font-size: 15px;
 }
 
-form .field.image {
-  margin: 20px 10px;
+form .studio-field.image, form .studio-field.soundcloud {
+  margin: 0 10px;
 }
 
-form .field.image input {
+form .studio-field.image label, form .studio-field.soundcloud label {
+  font-size: 10px;
+}
+
+form .studio-field.image input, form .studio-field.soundcloud input {
   height: 25px;
   font-size: 10px;
 }
 
 form .actions input {
   margin: 10px 0;
+}
+
+form .actions input:hover {
+  background-color: #444;
 }

@@ -14,7 +14,7 @@
   width: 250px;
   height: 250px;
   position: relative;
-  background-color: #111;
+  background-color: #222;
 }
 
 .live-client img {
@@ -42,6 +42,7 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
+  opacity: 1;
 }
 
 .live-client .info {
@@ -50,7 +51,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #232;
+  background-color: #444;
   opacity: 0;
   transition: opacity 1.5s;
 }
@@ -63,6 +64,12 @@
 .live-client .info .contact {
   margin: 10px 10px 0;
   font-size: 12px;
+}
+
+.edit-label {
+  position: absolute;
+  top: 10px;
+  left: 100px;
 }
 
 .live-client:hover {
@@ -103,7 +110,7 @@ form .field.contact input {
 }
 
 form .field.image {
-  margin: 20px 10px;
+  margin: 10px;
 }
 
 form .field.image input {
@@ -113,4 +120,13 @@ form .field.image input {
 
 form .actions input {
   margin: 10px 0;
+  background-color: #333;
+  border: 1px solid #444;
+  color: #ddd;
+  font-size: 15px;
+  width: 150px;
+}
+
+form .actions input:hover {
+  background-color: #444;
 }

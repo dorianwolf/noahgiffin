@@ -11,27 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :artist %><br>
-    <%= f.text_field :artist %>
+  <div class="studio-field artist">
+    <%= f.text_field :artist, placeholder: 'artist' %>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.text_field :image %>
+  <div class="studio-field album">
+    <%= f.text_field :album, placeholder: 'album or track' %>
   </div>
-  <div class="field">
-    <%= f.label :album %><br>
-    <%= f.text_field :album %>
+  <div class="studio-field role">
+    <%= f.text_field :role, placeholder: 'role' %>
   </div>
-  <div class="field">
-    <%= f.label :role %><br>
-    <%= f.text_field :role %>
+  <div class="studio-field image">
+    <%= f.label :image %>
+    <%= f.text_field :image, placeholder: 'image' %>
   </div>
-  <div class="field">
-    <%= f.label :soundcloud %><br>
-    <%= f.text_field :soundcloud %>
+  <div class="studio-field soundcloud">
+    <%= f.label 'soundcloud link' %>
+    <%= f.text_field :soundcloud, placeholder: 'soundcloud link' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update' %>
   </div>
 <% end %>

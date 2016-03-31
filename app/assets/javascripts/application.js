@@ -29,15 +29,17 @@ function initPage() {
     var header = $('.audio-engineer');
     console.log(header.html().indexOf(text));
     if(header.html().indexOf(text) == -1){
-      header.append(text);
+      if(header.html().indexOf('Logout') == -1){
+        header.append(text);
+      }
     }
     $('.overline').animate({
       width: $('.audio-engineer').width()-4
   	}, 2000);
   } else {
     var header = $('.audio-engineer');
-    if(header.html().indexOf('admin') == -1){
-      header.append('admin');
+    if(header.html().indexOf('Logout') == -1){
+      header.append('audio-engineer');
     }
     $('.overline').animate({
       width: $('.audio-engineer').width()-4

@@ -1,15 +1,33 @@
 <div class="list">
   <div class="live-client">
     <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
+    <div class="info">
+      <p class="artist"><%= @live_client.artist %></p>
+      <a href="mailto:<%=@live_client.contact%>">
+        <p class="contact">contact</p>
+      </a>
+    </div>
   </div>
   <div class="live-client">
-    <%= render 'form' %>
-    <%= link_to image_tag('delete.png'), admin_live_client_path(@live_client), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
+    <p class="edit-label">
+      Front
+    </p>
   </div>
   <div class="live-client">
     <div class="info back">
+      <p class="edit-label">
+        Back
+      </p>
       <p class="artist"><%= @live_client.artist %></p>
       <p class="contact">contact</p>
     </div>
+  </div>
+  <div class="live-client">
+    <p class="edit-label">
+      Edit
+    </p>
+    <%= render 'form' %>
+    <%= link_to image_tag('delete.png'), admin_live_client_path(@live_client), method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 </div>

@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    root to: 'home#index'
+    root to: 'home#index', layout: 'admin'
+    resources :bio, only: [:index], layout: 'admin'
     resources :live_clients, :path => 'live'
     resources :studio_clients, :path => 'studio' do
       resources :tracks
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   # DELETE THIS SHIT ONCE ALICE IS SIGNED UP
-  # get '/signup' => 'users#new'
-  # post '/users' => 'users#create'
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
   # DELETE THIS SHIT ONCE ALICE IS SIGNED UP
 end

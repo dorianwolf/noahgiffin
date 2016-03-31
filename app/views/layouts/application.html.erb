@@ -17,8 +17,8 @@
         <a href="<%= root_path %>">
       <% end %>
         <span class="alice">Alice Wilder</span>
-        <div class="audio-engineer"><div class="overline"></div></div>
       </a>
+        <div class="audio-engineer"><div class="overline"></div></div>
     </div>
     <div class="content">
       <%= yield %>
@@ -30,7 +30,7 @@
         </div>
       <% else %>
         <div class="copyright">
-          <span>&copy;2016 Alice Wilder Sound</span>
+          <span><a href="<%= login_path%>" class='secret'>&copy;</a>2016 Alice Wilder Sound</span>
         </div>
         <div class="social-media"><a href="https://www.instagram.com/alice_aka_chip"><img src="<%= asset_path "instagram.png" %>" /></a></div>
         <div class="social-media"><a href="https://www.facebook.com/alice.wilder.5"><img src="<%= asset_path "facebook.png" %>" /></a></div>

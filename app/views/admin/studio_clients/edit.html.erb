@@ -1,13 +1,27 @@
 <div class="list">
   <p id="notice"><%= notice %></p>
   <div class="studio-client">
-    <img src="<%= @studio_client.image %>" alt="" />
+    <img src="<%= @studio_client.image %>" alt="" class="artist-pic"/>
+    <span class="info">
+      <div class="artist"><%= @studio_client.artist %></div>
+      <div class="album"><%= @studio_client.album %></div>
+      <div class="role"><%= @studio_client.role %></div>
+      <% if @studio_client.soundcloud %>
+        <%= @studio_client.soundcloud.html_safe %>
+      <% end %>
+    </span>
   </div>
   <div class="studio-client">
-    <%= render 'form' %>
+    <p class="edit-label">
+      Front
+    </p>
+    <img src="<%= @studio_client.image %>" alt="" class="artist-pic"/>
   </div>
   <div class="studio-client">
     <div class="info back">
+      <p class="edit-label">
+        Back
+      </p>
       <div class='artist'>
         <%= @studio_client.artist %>
       </div>
@@ -19,13 +33,15 @@
       <div class='role'>
         <%= @studio_client.role %>
       </div>
-
-      <% @studio_client.tracks.each do |track| %>
-        <div class="track">
-          <p> <%= track.title %></p>
-          <%= link_to image_tag('delete.png'), admin_studio_client_track_path(@studio_client, track), method: :delete %>
-        </div>
+      <% if @studio_client.soundcloud %>
+        <%= @studio_client.soundcloud.html_safe %>
       <% end %>
     </div>
+  </div>
+  <div class="studio-client">
+    <%= render 'form' %>
+    <p class="edit-label">
+      Edit
+    </p>
   </div>
 </div>
