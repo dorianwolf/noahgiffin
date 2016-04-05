@@ -23,11 +23,20 @@ $(window).bind('page:change', function() {
 });
 function initPage() {
 
-  // Overline animation and text customization
+  // Overline animation and text and menu display
   if($('.header-info').length){
+
+    // Menu display
+    if($('.menu-item').length){
+      $('.current_page').removeClass('current_page');
+      var page = '.'+$('.header-info').data('page');
+      var menu_item = $(page);
+      menu_item.addClass('current_page');
+    }
+
+    // Overline animation and text
     var text = $('.header-info').data('text');
     var header = $('.audio-engineer');
-    console.log(header.html().indexOf(text));
     if(header.html().indexOf(text) == -1){
       if(header.html().indexOf('Logout') == -1){
         header.append(text);
@@ -45,5 +54,8 @@ function initPage() {
       width: $('.audio-engineer').width()-4
   	}, 2000);
   }
+
+  // Menu shows current page
+
 
 };

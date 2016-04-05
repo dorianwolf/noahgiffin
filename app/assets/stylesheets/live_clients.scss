@@ -5,7 +5,7 @@
 .list {
   display: table;
   margin: 20px auto;
-  max-width: 1000px;
+  max-width: 1010px;
 }
 
 .live-client {
@@ -15,6 +15,7 @@
   height: 250px;
   position: relative;
   background-color: #222;
+  border: 1px solid #444;
 }
 
 .live-client img {

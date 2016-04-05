@@ -1,58 +1,12 @@
 <% if notice %>
-  <%= content_tag "div", class:'header-info', data: {text: notice} do %>
+  <%= content_tag "div", class:'header-info', data: {text: notice, page: 'home'} do %>
   <% end %>
 <% else %>
-  <%= content_tag "div", class:'header-info', data: {text: 'audio engineer'} do %>
+  <%= content_tag "div", class:'header-info', data: {text: 'audio engineer', page: 'home'} do %>
   <% end %>
 <% end %>
 <div class="menu">
   <div class="menu-item blurb"><p>Alice Wilder is an audio engineer based out of Seattle and Toronto</p><span class='info'></span></div>
   <div class="menu-item"><span class='info'></span></div>
-  <% if current_user %>
-    <a href="<%= admin_bio_index_path %>">
-  <% else %>
-    <a href="<%= bio_index_path %>">
-  <% end %>
-    <div class="menu-item bio">
-      <%= image_tag('alice.jpg', class: 'jpg') %>
-      <%= image_tag('alice.jpg', class: 'gif') %>
-      <span class="info">
-        <p>
-          bio
-        </p>
-      </span>
-    </div>
-  </a>
-  <div class="menu-item"><span class='info'></span></div>
-  <% if current_user %>
-    <a href="<%= admin_studio_clients_path %>">
-  <% else %>
-    <a href="<%= studio_clients_path %>">
-  <% end %>
-    <div class="menu-item studio">
-      <%= image_tag('flame.jpg', class: 'jpg') %>
-      <%= image_tag('flame.gif', class: 'gif') %>
-      <span class='info'>
-        <p>
-          studio
-        </p>
-      </span>
-    </div>
-  </a>
-  <% if current_user %>
-    <a href="<%= admin_live_clients_path %>">
-  <% else %>
-    <a href='<%= live_clients_path %>'>
-  <% end %>
-    <div class="menu-item live">
-      <%= image_tag('equalizer.jpg', class: 'jpg') %>
-      <%= image_tag('equalizer.gif', class: 'gif') %>
-      <span class='info'>
-        <p>
-          live
-        </p>
-      </span>
-    </div>
-  </a>
-  <div class="menu-item"><span class='info'></span></div>
+  <%= render 'shared/menu' %>
 </div>

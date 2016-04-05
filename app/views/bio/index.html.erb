@@ -1,54 +1,19 @@
 <% if notice %>
-  <%= content_tag "div", class:'header-info', data: {text: notice} do %>
+  <%= content_tag "div", class:'header-info', data: {text: notice, page: 'bio'} do %>
   <% end %>
 <% else %>
-  <%= content_tag "div", class:'header-info', data: {text: 'bio'} do %>
+  <%= content_tag "div", class:'header-info', data: {text: 'bio', page: 'bio'} do %>
   <% end %>
 <% end %>
 <div class="menu">
+  <%= render 'shared/menu' %>
   <div class="menu-item">
+    <%= image_tag('alice.gif', class: 'gif') %>
     <%= image_tag('alice.jpg', class: 'jpg') %>
-    <%= image_tag('alice.jpg', class: 'gif') %>
-    <p>
-      bio
-    </p>
   </div>
-  <div class="menu-item"><span class='info'></span></div>
-  <% if current_user %>
-    <a href="<%= admin_studio_clients_path %>">
-  <% else %>
-    <a href="<%= studio_clients_path %>">
-  <% end %>
-    <div class="menu-item studio">
-      <%= image_tag('flame.jpg', class: 'jpg') %>
-      <%= image_tag('flame.gif', class: 'gif') %>
-      <span class='info'>
-        <p>
-          studio
-        </p>
-      </span>
-    </div>
-  </a>
-  <% if current_user %>
-    <a href="<%= admin_live_clients_path %>">
-  <% else %>
-    <a href='<%= live_clients_path %>'>
-  <% end %>
-    <div class="menu-item live">
-      <%= image_tag('equalizer.jpg', class: 'jpg') %>
-      <%= image_tag('equalizer.gif', class: 'gif') %>
-      <span class='info'>
-        <p>
-          live
-        </p>
-      </span>
-    </div>
-  </a>
-  <div class="menu-item"><span class='info'></span></div>
   <div class="menu-item blurb">
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
   </div>
-  <div class="menu-item"><span class='info'></span></div>
 </div>
