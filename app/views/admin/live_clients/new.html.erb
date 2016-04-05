@@ -1,7 +1,15 @@
-<div class="live-client">
-  <h1>New Live Client</h1>
-
-  <%= render 'form' %>
-
-  <%= link_to 'Back', live_clients_path %>
+<% if notice %>
+  <%= content_tag "div", class:'header-info', data: {text: notice, page: 'live'} do %>
+  <% end %>
+<% else %>
+  <%= content_tag "div", class:'header-info', data: {text: 'bands mixed live', page: 'live'} do %>
+  <% end %>
+<% end %>
+<div class="list">
+  <div class="live-client">
+    <p>
+      New Live Client
+    </p>
+    <%= render 'form' %>
+  </div>
 </div>

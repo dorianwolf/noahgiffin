@@ -69,6 +69,6 @@ class LiveClientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def live_client_params
-      params.require(:live_client).permit(:artist, :image, :contact)
+      params.require(:live_client).permit(:artist, :image, :contact, :soundcloud)
     end
 end

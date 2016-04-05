@@ -1,5 +1,11 @@
+<% if notice %>
+  <%= content_tag "div", class:'header-info', data: {text: notice, page: 'studio'} do %>
+  <% end %>
+<% else %>
+  <%= content_tag "div", class:'header-info', data: {text: 'bands mixed in the studio', page: 'studio'} do %>
+  <% end %>
+<% end %>
 <div class="list">
-  <p id="notice"><%= notice %></p>
   <div class="studio-client">
     <img src="<%= @studio_client.image %>" alt="" class="artist-pic"/>
     <span class="info">
@@ -12,7 +18,7 @@
     </span>
   </div>
   <div class="studio-client">
-    <p class="edit-label">
+    <p class="front">
       Front
     </p>
     <img src="<%= @studio_client.image %>" alt="" class="artist-pic"/>
@@ -39,9 +45,9 @@
     </div>
   </div>
   <div class="studio-client">
-    <%= render 'form' %>
     <p class="edit-label">
       Edit
     </p>
+    <%= render 'form' %>
   </div>
 </div>

@@ -1,7 +1,15 @@
-<div class="studio-client">
-  <h1>New Studio Client</h1>
-
-  <%= render 'form' %>
-
-  <%= link_to 'Back', studio_clients_path %>
+<% if notice %>
+  <%= content_tag "div", class:'header-info', data: {text: notice, page: 'studio'} do %>
+  <% end %>
+<% else %>
+  <%= content_tag "div", class:'header-info', data: {text: 'bands mixed in the studio', page: 'studio'} do %>
+  <% end %>
+<% end %>
+<div class="list">
+    <div class="studio-client">
+      <p>
+        New Studio Client
+      </p>
+      <%= render 'form' %>
+    </div>
 </div>

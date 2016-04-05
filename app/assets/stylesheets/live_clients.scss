@@ -14,8 +14,8 @@
   width: 250px;
   height: 250px;
   position: relative;
-  background-color: #222;
-  border: 1px solid #444;
+  background-color: #090909;
+  border: 1px solid #333;
 }
 
 .live-client img {
@@ -52,13 +52,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #444;
+  background-color: #090909;
   opacity: 0;
   transition: opacity 1.5s;
 }
 
 .live-client .info .artist {
-  margin: 60px 10px 0;
+  margin: 0 10px;
   font-size: 30px;
 }
 
@@ -67,10 +67,11 @@
   font-size: 12px;
 }
 
-.edit-label {
+.live-client p.front {
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 100px;
+  padding: 0;
 }
 
 .live-client:hover {
@@ -81,6 +82,11 @@
 
 .live-client .info.back {
   opacity: 0.7;
+}
+
+.live-client p {
+  text-align: center;
+  padding: 8px 0;
 }
 
 form {
@@ -101,7 +107,7 @@ form .field input {
 }
 
 form .field.artist input {
-  margin: 57px 10px 0;
+  margin: 0 10px;
   font-size: 30px;
 }
 
@@ -114,13 +120,18 @@ form .field.image {
   margin: 10px;
 }
 
+form .field.soundcloud input {
+  height: 25px;
+  font-size: 12px;
+}
+
 form .field.image input {
   height: 25px;
   font-size: 10px;
 }
 
-form .actions input {
-  margin: 10px 0;
+.live-client form .actions input {
+  margin: 20px 0;
   background-color: #333;
   border: 1px solid #444;
   color: #ddd;

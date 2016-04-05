@@ -12,6 +12,9 @@
       <img src="<%= live_client.image %>" alt="" class="artist-pic"/>
       <span class="info">
         <p class="artist"><%= live_client.artist %></p>
+        <% if live_client.soundcloud %>
+          <%= live_client.soundcloud.html_safe %>
+        <% end %>
       </span>
     </div>
   <% end %>

@@ -1,16 +1,23 @@
+<% if notice %>
+  <%= content_tag "div", class:'header-info', data: {text: notice, page: 'live'} do %>
+  <% end %>
+<% else %>
+  <%= content_tag "div", class:'header-info', data: {text: 'bands mixed live', page: 'live'} do %>
+  <% end %>
+<% end %>
 <div class="list">
   <div class="live-client">
     <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
     <div class="info">
       <p class="artist"><%= @live_client.artist %></p>
-      <a href="mailto:<%=@live_client.contact%>">
-        <p class="contact">contact</p>
-      </a>
+      <% if @live_client.soundcloud %>
+        <%= @live_client.soundcloud.html_safe %>
+      <% end %>
     </div>
   </div>
   <div class="live-client">
     <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
-    <p class="edit-label">
+    <p class="front">
       Front
     </p>
   </div>
@@ -20,7 +27,9 @@
         Back
       </p>
       <p class="artist"><%= @live_client.artist %></p>
-      <p class="contact">contact</p>
+      <% if @live_client.soundcloud %>
+        <%= @live_client.soundcloud.html_safe %>
+      <% end %>
     </div>
   </div>
   <div class="live-client">
