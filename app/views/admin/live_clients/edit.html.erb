@@ -7,7 +7,7 @@
 <% end %>
 <div class="list">
   <div class="live-client">
-    <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
+    <%= image_tag @live_client.image_url.to_s, class: 'artist-pic' %>
     <div class="info">
       <p class="artist"><%= @live_client.artist %></p>
       <% if @live_client.soundcloud %>

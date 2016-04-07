@@ -9,7 +9,7 @@
   <%= render 'shared/menu' %>
   <% @studio_clients.each do |studio_client| %>
     <div class="studio-client">
-      <%= image_tag studio_client.image_url.to_s %>
+      <%= image_tag studio_client.image_url.to_s, class: 'artist-pic' %>
       <span class="info">
         <a href="<%= edit_admin_studio_client_path(studio_client) %>">
           <div class="artist"><%= studio_client.artist %></div>

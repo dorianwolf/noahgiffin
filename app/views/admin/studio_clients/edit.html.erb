@@ -7,7 +7,7 @@
 <% end %>
 <div class="list">
   <div class="studio-client">
-    <img src="<%= @studio_client.image %>" alt="" class="artist-pic"/>
+    <%= image_tag @studio_client.image_url.to_s, class: 'artist-pic' %>
     <span class="info">
       <div class="artist"><%= @studio_client.artist %></div>
       <div class="album"><%= @studio_client.album %></div>

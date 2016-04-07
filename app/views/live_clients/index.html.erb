@@ -9,7 +9,7 @@
   <%= render 'shared/menu3' %>
   <% @live_clients.each do |live_client| %>
     <div class="live-client">
-      <img src="<%= live_client.image %>" alt="" class="artist-pic"/>
+      <%= image_tag live_client.image_url.to_s, class: 'artist-pic' %>
       <span class="info">
         <p class="artist"><%= live_client.artist %></p>
         <% if live_client.soundcloud %>
