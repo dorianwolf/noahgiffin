@@ -26,6 +26,13 @@
   opacity: 0.7;
 }
 
+.studio-client img.play {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  width: 30px;
+}
+
 .studio-client .add img {
   top: 90px;
   left: 90px;
@@ -58,7 +65,7 @@
 }
 
 .studio-client .info .artist {
-  padding: 40px 20px 0;
+  padding: 60px 20px 0;
   font-size: 30px;
 }
 
@@ -67,17 +74,32 @@
   font-size: 15px;
 }
 
+.studio-client .info .role {
+  font-size: 12px;
+}
+
 .studio-client .info .track {
   margin: 10px 10px 0;
   font-size: 11px;
 }
 
-iframe {
+.studio-client iframe, .studio-client .sc-delete {
+  display: none;
+}
+
+.studio-client iframe {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  height: 80px;
+  height: 100%;
   width: 100%;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.studio-client iframe.show, .studio-client .sc-delete.show {
+  display: block;
+  opacity: 1;
 }
 
 .studio-client:hover {
@@ -91,14 +113,19 @@ iframe {
 }
 
 .studio-client p {
-  text-align: center;
-  padding: 8px 0;
 }
 
-.studio-client p.front {
+.studio-client p.edit-label {
   position: absolute;
   top: 8px;
   left: 100px;
+  padding: 0;
+}
+
+.studio-client p.new-label {
+  position: absolute;
+  top: 8px;
+  left: 41px;
   padding: 0;
 }
 
@@ -111,9 +138,10 @@ form .studio-field {
 }
 
 form .studio-field input {
+  padding: 0 10px;
   background-color: #222;
   color: #ddd;
-  width: 225px;
+  width: 210px;
   border: none;
   font: inherit;
   text-transform: uppercase;
@@ -121,7 +149,7 @@ form .studio-field input {
 
 form .studio-field.artist input {
   font-size: 30px;
-  margin: 0 10px;
+  margin: 30px 10px 0;
 }
 
 form .studio-field.album input, form .studio-field.role input  {

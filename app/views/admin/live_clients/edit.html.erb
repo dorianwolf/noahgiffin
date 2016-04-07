@@ -11,13 +11,15 @@
     <div class="info">
       <p class="artist"><%= @live_client.artist %></p>
       <% if @live_client.soundcloud %>
+        <%= image_tag 'play.png', class: 'play' %>
         <%= @live_client.soundcloud.html_safe %>
+        <%= image_tag 'delete.png', class: 'sc-delete' %>
       <% end %>
     </div>
   </div>
   <div class="live-client">
     <img src="<%= @live_client.image %>" alt="" class="artist-pic"/>
-    <p class="front">
+    <p class="edit-label">
       Front
     </p>
   </div>
@@ -28,7 +30,9 @@
       </p>
       <p class="artist"><%= @live_client.artist %></p>
       <% if @live_client.soundcloud %>
+        <%= image_tag 'play.png', class: 'play' %>
         <%= @live_client.soundcloud.html_safe %>
+        <%= image_tag 'delete.png', class: 'sc-delete' %>
       <% end %>
     </div>
   </div>

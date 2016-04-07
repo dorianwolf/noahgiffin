@@ -55,7 +55,18 @@ function initPage() {
   	}, 2000);
   }
 
-  // Menu shows current page
+
+  // Play icon opens soundcloud, delete closes
+  $('.play').on('click', function(e){
+    $(this).next().addClass('show');
+    $(this).next().next().addClass('show');
+  });
+
+  $('.sc-delete').on('click', function(){
+    $(this).removeClass('show');
+    $(this).prev().removeClass('show');
+  });
+
 
 
 };
