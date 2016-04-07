@@ -139,7 +139,7 @@ form .studio-field {
 
 form .studio-field input {
   padding: 0 10px;
-  background-color: #222;
+  background-color: #151515;
   color: #ddd;
   width: 210px;
   border: none;
@@ -161,6 +161,17 @@ form .studio-field.image, form .studio-field.soundcloud {
   margin: 0 10px;
 }
 
+.studio-client form .upload {
+  text-align: center;
+  width: 150px;
+  margin: 5px auto 0;
+  font-size: 12px;
+
+  input {
+    width: 180px;
+  }
+}
+
 form .studio-field.image label, form .studio-field.soundcloud label {
   font-size: 10px;
 }
@@ -171,7 +182,7 @@ form .studio-field.image input, form .studio-field.soundcloud input {
 }
 
 .studio-client form .actions input {
-  margin: 10px 0;
+  margin: 5px 0;
   background-color: #333;
   border: 1px solid #444;
   color: #ddd;

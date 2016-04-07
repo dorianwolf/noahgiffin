@@ -1,4 +1,4 @@
-<%= form_for([:admin, @studio_client]) do |f| %>
+<%= form_for([:admin, @studio_client], multipart: true) do |f| %>
   <% if @studio_client.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@studio_client.errors.count, "error") %> prohibited this studio_client from being saved:</h2>
@@ -20,9 +20,12 @@
   <div class="studio-field role">
     <%= f.text_field :role, placeholder: 'role' %>
   </div>
-  <div class="studio-field image">
+  <div class="upload">
     <%= f.label :image %>
-    <%= f.text_field :image, placeholder: 'image' %>
+    <%= f.file_field :image %>
+  </div>
+  <div class="studio-field image">
+    <%= f.text_field :remote_image_url, placeholder: 'or paste an image link' %>
   </div>
   <div class="studio-field soundcloud">
     <%= f.label 'soundcloud link' %>

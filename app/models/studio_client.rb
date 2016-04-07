@@ -1,4 +1,5 @@
 class StudioClient < ActiveRecord::Base
   has_many :tracks, dependent: :destroy
-  validates :artist, :image, :album, :role, presence: true
+  validates :artist, :album, :role, presence: true
+  mount_uploader :image, ImageUploader
 end

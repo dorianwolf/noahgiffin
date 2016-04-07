@@ -9,7 +9,7 @@
   <%= render 'shared/menu' %>
   <% @live_clients.each do |live_client| %>
     <div class="live-client">
-      <img src="<%= live_client.image %>" alt="" class="artist-pic"/>
+      <%= image_tag live_client.image_url.to_s %>
       <div class="info">
         <a href="<%= edit_admin_live_client_path(live_client) %>">
           <p class="artist"><%= live_client.artist %></p>

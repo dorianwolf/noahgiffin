@@ -43,11 +43,13 @@ class Admin::StudioClientsController < AdminController
   # PATCH/PUT /studio_clients/1
   # PATCH/PUT /studio_clients/1.json
   def update
+
     respond_to do |format|
       if @studio_client.update(studio_client_params)
         format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Studio client was successfully updated.' }
         format.json { render :show, status: :ok, location: @studio_client }
       else
+        Rails.logger.info(@studio_client.errors.inspect)
         format.html { render :edit }
         format.json { render json: @studio_client.errors, status: :unprocessable_entity }
       end
@@ -77,6 +79,6 @@ class Admin::StudioClientsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def studio_client_params
-      params.require(:studio_client).permit(:artist, :image, :album, :role, :soundcloud)
+      params.require(:studio_client).permit(:artist, :image, :remote_image_url, :album, :role, :soundcloud)
     end
 end
