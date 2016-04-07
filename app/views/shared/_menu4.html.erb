@@ -1,0 +1,60 @@
+<% if current_user %>
+  <a href="<%= admin_root_path %>">
+<% else %>
+  <a href="<%= root_path %>">
+<% end %>
+  <div class="menu-item home">
+    <%= image_tag('eq76.png', class: 'jpg') %>
+    <%= image_tag('equalizer.gif', class: 'gif') %>
+    <span class="info">
+      <p>
+        home
+      </p>
+    </span>
+  </div>
+</a>
+<% if current_user %>
+  <a href="<%= admin_bio_index_path %>">
+<% else %>
+  <a href="<%= bio_index_path %>">
+<% end %>
+  <div class="menu-item bio">
+    <%= image_tag('eq63.png', class: 'jpg') %>
+    <%= image_tag('equalizer.gif', class: 'gif') %>
+    <span class="info">
+      <p>
+        bio
+      </p>
+    </span>
+  </div>
+</a>
+<% if current_user %>
+  <a href="<%= admin_studio_clients_path %>">
+<% else %>
+  <a href="<%= studio_clients_path %>">
+<% end %>
+  <div class="menu-item studio">
+    <%= image_tag('eq34.png', class: 'jpg') %>
+    <%= image_tag('equalizer.gif', class: 'gif') %>
+    <span class='info'>
+      <p>
+        studio
+      </p>
+    </span>
+  </div>
+</a>
+<% if current_user %>
+  <a href="<%= admin_live_clients_path %>">
+<% else %>
+  <a href='<%= live_clients_path %>'>
+<% end %>
+  <div class="menu-item live">
+    <%= image_tag('eq44.png', class: 'jpg') %>
+    <%= image_tag('equalizer.gif', class: 'gif') %>
+    <span class='info'>
+      <p>
+        live
+      </p>
+    </span>
+  </div>
+</a>
