@@ -10,7 +10,7 @@
     <%= image_tag @live_client.image_url.to_s, class: 'artist-pic' %>
     <div class="info">
       <p class="artist"><%= @live_client.artist %></p>
-      <% if @live_client.soundcloud %>
+      <% if @live_client.soundcloud and live_client.soundcloud.length > 0 %>
         <%= image_tag 'play.png', class: 'play' %>
         <%= @live_client.soundcloud.html_safe %>
         <%= image_tag 'delete.png', class: 'sc-delete' %>
@@ -29,7 +29,7 @@
         Back
       </p>
       <p class="artist"><%= @live_client.artist %></p>
-      <% if @live_client.soundcloud %>
+      <% if @live_client.soundcloud and live_client.soundcloud.length > 0 %>
         <%= image_tag 'play.png', class: 'play' %>
         <%= @live_client.soundcloud.html_safe %>
         <%= image_tag 'delete.png', class: 'sc-delete' %>
