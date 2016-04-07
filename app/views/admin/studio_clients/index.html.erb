@@ -7,7 +7,7 @@
 <% end %>
 <div class="list">
   <%= render 'shared/menu' %>
-  <% @studio_clients.each do |studio_client| %>
+  <% @studio_clients.reverse_each do |studio_client| %>
     <div class="studio-client">
       <%= image_tag studio_client.image_url.to_s, class: 'artist-pic' %>
       <span class="info">

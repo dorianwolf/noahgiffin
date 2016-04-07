@@ -7,7 +7,7 @@
 <% end %>
 <div class="list">
   <%= render 'shared/menu3' %>
-  <% @live_clients.each do |live_client| %>
+  <% @live_clients.reverse_each do |live_client| %>
     <div class="live-client">
       <%= image_tag live_client.image_url.to_s, class: 'artist-pic' %>
       <span class="info">
