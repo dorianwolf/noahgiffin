@@ -79,6 +79,6 @@ class Admin::StudioClientsController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def studio_client_params
-      params.require(:studio_client).permit(:artist, :image, :remote_image_url, :album, :role, :soundcloud)
+      params.require(:studio_client).permit(:artist, :image, :album, :role, :soundcloud)
     end
 end
