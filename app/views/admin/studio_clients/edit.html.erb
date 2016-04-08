@@ -41,7 +41,7 @@
       <div class='role'>
         <%= @studio_client.role %>
       </div>
-      <% if @studio_client.soundcloud and studio_client.soundcloud.length > 0 %>
+      <% if @studio_client.soundcloud and @studio_client.soundcloud.length > 0 %>
         <%= image_tag 'play.png', class: 'play' %>
         <%= @studio_client.soundcloud.html_safe %>
         <%= image_tag 'delete.png', class: 'sc-delete' %>

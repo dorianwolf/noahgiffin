@@ -9,7 +9,7 @@
   <%= render 'shared/menu4' %>
   <% @studio_clients.reverse_each do |studio_client| %>
     <div class="studio-client">
-      <%= image_tag studio_client.image_url.to_s, class: 'artist-pic' %>
+      <%= image_tag studio_client.image.url, class: 'artist-pic' %>
       <span class="info">
         <div class="artist"><%= studio_client.artist %></div>
         <div class="album"><%= studio_client.album %></div>

@@ -28,8 +28,10 @@ gem 'rails_12factor'
 gem 'bcrypt', '~> 3.1.7'
 
 # Upload shit
-gem 'carrierwave'
 gem 'rmagick'
+gem 'fog', require: 'fog/aws'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
+gem 'figaro'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
