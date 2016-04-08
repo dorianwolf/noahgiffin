@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -32,10 +33,12 @@
         <div class="copyright">
           <span><a href="<%= login_path%>" class='secret'>&copy;</a>2016 Alice Wilder Sound</span>
         </div>
-        <div class="social-media"><a href="https://www.instagram.com/alice_aka_chip" target='_blank'><img src="<%= asset_path "instagram.png" %>" /></a></div>
-        <div class="social-media"><a href="https://www.facebook.com/alice.wilder.5" target='_blank'><img src="<%= asset_path "facebook.png" %>" /></a></div>
-        <div class="social-media"><a href="mailto:contact@alicewildersound.com"><img src="<%= asset_path "mail.png" %>" /></a></div>
-        <div class="copyright">
+        <div class="social-medias">
+          <div class="social-media"><a href="https://www.instagram.com/alice_aka_chip" target='_blank'><img src="<%= asset_path "instagram.png" %>" /></a></div>
+          <div class="social-media"><a href="https://www.facebook.com/alice.wilder.5" target='_blank'><img src="<%= asset_path "facebook.png" %>" /></a></div>
+          <div class="social-media"><a href="mailto:contact@alicewildersound.com"><img src="<%= asset_path "mail.png" %>" /></a></div>
+        </div>
+        <div class="copyright dorian">
           <span>web designed by Dorian Thornton</span>
         </div>
       <% end %>

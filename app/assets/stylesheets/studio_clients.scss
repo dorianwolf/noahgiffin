@@ -40,7 +40,7 @@
   opacity: 0.8;
 }
 
-.studio-client img:hover {
+.studio-client img:hover, .studio-client img:focus {
   opacity: 1;
 }
 
@@ -192,3 +192,14 @@ form .studio-field.image input, form .studio-field.soundcloud input {
 form .actions input:hover {
   background-color: #444;
 }
+
+@media only screen
+  and (max-width : 736px) {
+
+  .studio-client {
+    .info {
+      opacity: 0.7;
+    }
+  }
+
+  }

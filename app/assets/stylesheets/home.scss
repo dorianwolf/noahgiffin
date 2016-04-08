@@ -33,12 +33,15 @@
   display: none;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item:focus {
   .gif {
     display: inline;
   }
   .jpg {
     display: none;
+  }
+  .info {
+    opacity: 1;
   }
 }
 
@@ -78,8 +81,11 @@
   }
 }
 
-.menu-item:hover {
-  .info {
+@media only screen
+  and (max-width : 736px) {
+
+  .menu-item .info {
     opacity: 1;
   }
-}
+
+  }

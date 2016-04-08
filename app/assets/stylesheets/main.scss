@@ -94,24 +94,67 @@ a {
   }
 }
 
-@media screen and (max-width: 480px){
-
+@media only screen
+  and (max-width : 736px) {
 
   .content {
+    padding-bottom: 100px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .header {
+    padding: 20px 0;
+
+    .alice {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .audio-engineer {
+      margin-top: 0;
+      font-size: 15px;
+    }
+  }
+
+  .menu, .list {
     display: block;
-  }
+    width: 100%;
 
-  span {
-  }
+    .menu-item, .live-client, .studio-client {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
 
-  .alice {
-  }
+    .blurb.short {
+      height: 190px;
+    }
 
-  .audio-engineer {
+    .blurb {
+      display: table;
+      max-width: 210px;
+      text-align: center;
+      padding: 30px 20px;
 
+      p {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 25px;
+      }
+    }
   }
 
   .footer {
-    height: 50px;
+    height: auto;
+
+    .social-media {
+      padding: 0;
+    }
+
+    .dorian {
+      margin: 5px 0 15px;
+    }
   }
+
 }

@@ -40,7 +40,7 @@
   opacity: 0.8;
 }
 
-.live-client img:hover {
+.live-client img:hover, .live-client img:focus {
   opacity: 1;
 }
 
@@ -178,3 +178,14 @@ form .field.image input {
 form .actions input:hover {
   background-color: #444;
 }
+
+@media only screen
+  and (max-width : 736px) {
+
+  .live-client {
+    .info {
+      opacity: 0.7;
+    }
+  }
+
+  }
