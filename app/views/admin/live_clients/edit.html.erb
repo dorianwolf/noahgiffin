@@ -29,11 +29,6 @@
         Back
       </p>
       <p class="artist"><%= @live_client.artist %></p>
-      <% if @live_client.soundcloud and @live_client.soundcloud.length > 0 %>
-        <%= image_tag 'play.png', class: 'play' %>
-        <%= @live_client.soundcloud.html_safe %>
-        <%= image_tag 'delete.png', class: 'sc-delete' %>
-      <% end %>
     </div>
   </div>
   <div class="live-client">
@@ -41,6 +36,6 @@
       Edit
     </p>
     <%= render 'form' %>
-    <%= link_to image_tag('delete.png'), admin_live_client_path(@live_client), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to image_tag('delete.png'), admin_live_client_path(@live_client), method: :delete, data: { confirm: 'You want to delete this?' } %>
   </div>
 </div>

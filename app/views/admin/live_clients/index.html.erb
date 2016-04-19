@@ -14,11 +14,6 @@
         <a href="<%= edit_admin_live_client_path(live_client) %>">
           <p class="artist"><%= live_client.artist %></p>
         </a>
-        <% if live_client.soundcloud and live_client.soundcloud.length > 0 %>
-          <%= image_tag 'play.png', class: 'play' %>
-          <%= live_client.soundcloud.html_safe %>
-          <%= image_tag 'delete.png', class: 'sc-delete' %>
-        <% end %>
       </div>
     </div>
   <% end %>

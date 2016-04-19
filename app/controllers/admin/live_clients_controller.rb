@@ -28,7 +28,7 @@ class Admin::LiveClientsController < AdminController
 
     respond_to do |format|
       if @live_client.save
-        format.html { redirect_to admin_live_clients_path, notice: 'Live client was successfully created.' }
+        format.html { redirect_to admin_live_clients_path, notice: 'Saved.' }
         format.json { render :show, status: :created, location: @live_client }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::LiveClientsController < AdminController
   def update
     respond_to do |format|
       if @live_client.update(live_client_params)
-        format.html { redirect_to edit_admin_live_client_path(@live_client), notice: 'Live client was successfully updated.' }
+        format.html { redirect_to edit_admin_live_client_path(@live_client), notice: 'Saved.' }
         format.json { render :show, status: :ok, location: @live_client }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::LiveClientsController < AdminController
   def destroy
     @live_client.destroy
     respond_to do |format|
-      format.html { redirect_to admin_live_clients_path, notice: 'Artist deleted' }
+      format.html { redirect_to admin_live_clients_path, notice: 'Deleted.' }
       format.json { head :no_content }
     end
   end

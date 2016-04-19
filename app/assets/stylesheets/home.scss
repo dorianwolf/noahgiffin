@@ -84,8 +84,16 @@
 @media only screen
   and (max-width : 736px) {
 
-  .menu-item .info {
-    opacity: 1;
-  }
+  .menu {
+    .menu-item .info {
+      opacity: 1;
+    }
+
+    .menu-item.blank {
+      display: none;
+    }
 
   }
+
+
+}

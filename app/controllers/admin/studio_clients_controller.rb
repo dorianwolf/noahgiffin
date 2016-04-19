@@ -31,7 +31,7 @@ class Admin::StudioClientsController < AdminController
 
     respond_to do |format|
       if @studio_client.save
-        format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Studio client was successfully created.' }
+        format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Saved.' }
         format.json { render :show, status: :created, location: @studio_client }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class Admin::StudioClientsController < AdminController
 
     respond_to do |format|
       if @studio_client.update(studio_client_params)
-        format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Studio client was successfully updated.' }
+        format.html { redirect_to edit_admin_studio_client_path(@studio_client), notice: 'Saved.' }
         format.json { render :show, status: :ok, location: @studio_client }
       else
         Rails.logger.info(@studio_client.errors.inspect)
@@ -61,7 +61,7 @@ class Admin::StudioClientsController < AdminController
   def destroy
     @studio_client.destroy
     respond_to do |format|
-      format.html { redirect_to studio_clients_url, notice: 'Studio client was successfully destroyed.' }
+      format.html { redirect_to studio_clients_url, notice: 'Deleted.' }
       format.json { head :no_content }
     end
   end

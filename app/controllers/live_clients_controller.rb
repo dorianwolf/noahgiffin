@@ -28,7 +28,7 @@ class LiveClientsController < ApplicationController
 
     respond_to do |format|
       if @live_client.save
-        format.html { redirect_to @live_client, notice: 'Live client was successfully created.' }
+        format.html { redirect_to @live_client, notice: 'Live Client Created' }
         format.json { render :show, status: :created, location: @live_client }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class LiveClientsController < ApplicationController
   def update
     respond_to do |format|
       if @live_client.update(live_client_params)
-        format.html { redirect_to @live_client, notice: 'Live client was successfully updated.' }
+        format.html { redirect_to @live_client, notice: 'Saved' }
         format.json { render :show, status: :ok, location: @live_client }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class LiveClientsController < ApplicationController
   def destroy
     @live_client.destroy
     respond_to do |format|
-      format.html { redirect_to live_clients_url, notice: 'Live client was successfully destroyed.' }
+      format.html { redirect_to live_clients_url, notice: 'Live Client Deleted' }
       format.json { head :no_content }
     end
   end
