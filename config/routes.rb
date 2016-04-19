@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   # DELETE THIS SHIT ONCE NOAH IS SIGNED UP
   # resources :users
-  get '/signup' => 'users#new'
-  post '/users' => 'users#create'
+  # get '/signup' => 'users#new'
+  # post '/users' => 'users#create'
   # DELETE THIS SHIT ONCE NOAH IS SIGNED UP
 end
